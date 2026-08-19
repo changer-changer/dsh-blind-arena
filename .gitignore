@@ -1,0 +1,10 @@
+node_modules/
+lib/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+.arena/
+coverage/
+dist/

@@ -1,0 +1,4 @@
+# Installing this bundle adds one dual-face plugin row to the DSH Web profile.
+- insert:
+    - id: arena
+      name: dsh-blind-arena
