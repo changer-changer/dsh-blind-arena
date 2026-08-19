@@ -4,6 +4,10 @@
 
 Same task. Same commit. Isolated worktrees. Shared verification. **Judge before you reveal.**
 
+![DSH Blind Arena: blind evaluation before reveal](assets/arena-hero.png)
+
+> In one sentence: judge an agent's work before you learn which model produced it.
+
 DSH Arena turns your DeepSeek Harness (DSH) Web into a model-vs-model fight club: pick a task, pick 2–4 contestants (any provider/model DSH supports), and let them race on the exact same repository state. Lane identities are kept secret until you decide — no label bias, no prompt leaks, no cherry-picked baselines.
 
 ## Why this exists
@@ -31,6 +35,8 @@ DSH Arena removes that bias structurally:
 - 🖥 **Full client UI** injected into DSH Web: create / list / live race / review / reveal
 
 ## Quick start
+
+The release checklist, demo narrative, and DSH ecosystem launch plan live in [docs/ECOSYSTEM-GROWTH.md](docs/ECOSYSTEM-GROWTH.md).
 
 1. Install the plugin into your DSH Web profile (Cordis bundle — see `cordis.patch.yml`):
    ```bash

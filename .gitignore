@@ -7,4 +7,5 @@ lib/
 !.env.example
 .arena/
 coverage/
+src/client/generated/
 dist/

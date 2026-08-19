@@ -7,7 +7,7 @@
 
 # 我把 DeepSeek Harness 变成了一个「盲测」AI 竞技场
 
-DSH（DeepSeek Harness，刚开源就 16 万星）的核心是「万物皆插件」。
+DSH（DeepSeek Harness）的核心是「万物皆插件」。这篇文案只使用可由仓库和 demo 直接验证的事实，不预设任何星数或社区规模。
 我给它写了一个插件：**dsh-blind-arena** —— 让多个模型在同一条起跑线上打比赛，而你**不知道谁是谁**。
 
 ## 它解决什么问题

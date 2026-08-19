@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client'
 import type { ArenaExperiment, ExperimentSummary } from '../types.ts'
+import { ARENA_HERO_ART } from './generated/art.ts'
 import { ArenaClient, ArenaRpcError } from './rpc.ts'
 import { ListView } from './views/ListView.tsx'
 import { CreateView } from './views/CreateView.tsx'
@@ -133,7 +134,7 @@ export function ArenaApp(props: { preview?: boolean; clientCtx?: ClientContext }
     <div className="ar-root">
       <div className="ar-panel">
         <header className="ar-topbar">
-          <div className="brand"><span className="mark">🏟️</span> DSH Arena</div>
+          <div className="brand"><span className="mark">✦</span><span><strong>DSH Blind Arena</strong><small>先盲评 · 后揭晓</small></span></div>
           <div className="crumb">/ {crumb}{running ? '' : ''}</div>
           <div className="spacer" />
           <button className="ghost small" onClick={() => { navigate({ kind: 'list' }); void reloadList() }}>实验列表</button>
@@ -144,7 +145,7 @@ export function ArenaApp(props: { preview?: boolean; clientCtx?: ClientContext }
           <div className="ar-wrap">
             {route.kind === 'list' && (
               <ListView summaries={summaries} onOpen={(id) => navigate({ kind: 'experiment', id })}
-                onCreate={() => navigate({ kind: 'create' })} onReload={reloadList} />
+                onCreate={() => navigate({ kind: 'create' })} onReload={reloadList} heroArt={ARENA_HERO_ART} />
             )}
             {route.kind === 'create' && (
               <CreateView onCreated={(id) => { toast('比赛已创建'); navigate({ kind: 'experiment', id }) }} onCancel={() => navigate({ kind: 'list' })} toast={toast} />

@@ -25,12 +25,15 @@
     "lib",
     "cordis.patch.yml",
     "fixtures",
+    "assets/arena-hero.png",
+    "docs/ECOSYSTEM-GROWTH.md",
     "README.md",
     "README.zh.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run typecheck && tsdown",
+    "generate:assets": "node scripts/embed-assets.mjs",
+    "build": "npm run generate:assets && npm run typecheck && tsdown",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "prepare": "npm run build"
