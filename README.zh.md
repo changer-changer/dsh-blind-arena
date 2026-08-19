@@ -4,6 +4,10 @@
 
 同一任务。同一 commit。隔离 worktree。共享验证。**先评判，再揭晓。**
 
+![DSH Blind Arena：盲评先于揭晓](assets/arena-hero.png)
+
+> 一句话：让你在不知道模型名字的情况下，先评判 Agent 的工作，再揭晓赢家。
+
 DSH Arena 把你的 DeepSeek Harness (DSH) Web 变成一个模型对战擂台：选一个任务，挑 2–4 位参赛者（DSH 支持的任何 provider/model），让它们在完全相同的仓库状态下同场竞技。揭晓之前，所有赛道身份严格保密——没有标签偏见、没有提示词泄漏、没有挑选过的基线。
 
 ## 为什么做这个
@@ -31,6 +35,8 @@ DSH Arena 从结构上消除这种偏见：
 - 🖥 **完整客户端 UI** 注入 DSH Web：创建 / 列表 / 实时竞速 / 评审 / 揭晓
 
 ## 快速开始
+
+完整的生态发布、demo 录屏和收录清单见 [docs/ECOSYSTEM-GROWTH.md](docs/ECOSYSTEM-GROWTH.md)。
 
 1. 把插件装进你的 DSH Web profile（Cordis bundle，见 `cordis.patch.yml`）：
    ```bash
