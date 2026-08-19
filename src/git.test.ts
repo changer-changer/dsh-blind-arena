@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { execFile } from 'node:child_process'
-import { mkdtemp, writeFile, rm } from 'node:fs/promises'
+import { mkdtemp, writeFile, rm, realpath } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { promisify } from 'node:util'
@@ -52,7 +52,7 @@ describe('git helpers', () => {
     try {
       expect(await isGitRepo(repo)).toBe(true)
       expect(await isGitRepo('/tmp')).toBe(false)
-      expect(await repoRoot(repo)).toBe(repo)
+      expect(await repoRoot(repo)).toBe(await realpath(repo))
       expect(await currentBranch(repo)).toBe('main')
       expect(await headCommit(repo)).toMatch(/^[0-9a-f]{40}$/)
     } finally {
