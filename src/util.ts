@@ -3,9 +3,9 @@ import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { LANE_LABELS, type LaneLabel } from './types.ts'
 
-/** Arena home: ~/.dsh/arena */
+/** Arena home: ~/.dsh/arena, overridable via DSH_ARENA_HOME for relocatable/CI runs. */
 export function arenaHome(): string {
-  return join(homedir(), '.dsh', 'arena')
+  return process.env.DSH_ARENA_HOME || join(homedir(), '.dsh', 'arena')
 }
 
 export function experimentDir(id: string): string {
