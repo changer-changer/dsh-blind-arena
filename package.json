@@ -2,6 +2,14 @@
   "name": "dsh-blind-arena",
   "version": "0.1.0",
   "description": "A blind, fair, local Agent arena inside DSH Web: same task, same commit, isolated worktrees, shared verification, judge before you reveal.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/changer-changer/dsh-blind-arena.git"
+  },
+  "homepage": "https://github.com/changer-changer/dsh-blind-arena",
+  "bugs": {
+    "url": "https://github.com/changer-changer/dsh-blind-arena/issues"
+  },
   "type": "module",
   "engines": {
     "node": "^22.19.0 || >=24.0.0"
